@@ -1,0 +1,284 @@
+body {
+    font-family: "Segoe UI", sans-serif;
+    background: #f4f6f9;
+    color: #333;
+}
+
+/* Sidebar */
+.sidebar {
+    height: 100vh;
+    width: 250px;
+    background: #2f3e46;
+    color: white;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.sidebar h2 {
+    margin-bottom: 20px;
+}
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.sidebar a:hover {
+    background: #3f4e56;
+}
+
+/* Main content */
+.main-content {
+    margin-left: 270px;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    background: white;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 20px;
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th, table td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+table th {
+    background: #4e54c8;
+    color: white;
+}
+
+table tr:hover {
+    background: #f1f1f1;
+}
+
+/* Buttons */
+button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button.add-slot {
+    background: #28a745;
+    color: white;
+}
+
+button.add-slot:hover {
+    background: #218838;
+}
+
+button.delete-slot {
+    background: #dc3545;
+    color: white;
+}
+
+button.delete-slot:hover {
+    background: #c82333;
+}
+/* Sidebar */
+.sidebar {
+    height: 100vh;
+    width: 250px;
+    background: #2f3e46;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: transform 0.3s ease;
+    padding: 20px;
+    transform: translateX(0);
+    z-index: 1000;
+}
+
+.sidebar.collapsed {
+    transform: translateX(-250px);
+}
+
+/* Sidebar toggle button */
+.toggle-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background: #4e54c8;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1100;
+}
+
+/* Main content */
+.main-content {
+    margin-left: 270px;
+    padding: 20px;
+    transition: margin-left 0.3s ease;
+}
+
+.main-content.collapsed {
+    margin-left: 20px;
+}
+body {
+    font-family: "Segoe UI", sans-serif;
+    background: #f4f6f9;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+header {
+    background: linear-gradient(90deg, #4e54c8, #8f94fb);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 26px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.slot-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.slot-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.slot-card h3 {
+    margin-top: 0;
+    font-size: 20px;
+    color: #4e54c8;
+}
+
+.slot-card p {
+    margin: 5px 0;
+}
+
+.slot-card button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: #28a745;
+    color: white;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    transition: background 0.2s ease;
+}
+
+.slot-card button:hover {
+    background: #218838;
+}
+
+.slot-card.booked {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.slot-card.booked button {
+    background: gray;
+    cursor: not-allowed;
+}
+
+form input {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+/* Fade-in Animation for slot cards */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.slot-card {
+    animation: fadeIn 0.5s ease-in-out;
+}
+button {
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+.sidebar {
+    transition: transform 0.4s ease-in-out;
+}
+
+.main-content {
+    transition: margin-left 0.4s ease-in-out;
+}
+
+/* Mobile Responsive Admin Dashboard */
+@media (max-width: 768px) {
+    .main-content {
+        margin-left: 0;
+        padding: 10px;
+    }
+
+    .sidebar {
+        width: 200px;
+    }
+
+    .toggle-btn {
+        top: 10px;
+        left: 10px;
+        padding: 6px 8px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .sidebar {
+        width: 150px;
+    }
+
+    .toggle-btn {
+        font-size: 12px;
+    }
+
+    table {
+        font-size: 12px;
+    }
+}

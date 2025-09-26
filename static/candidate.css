@@ -1,0 +1,144 @@
+body {
+    font-family: "Segoe UI", sans-serif;
+    background: #f4f6f9;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+header {
+    background: linear-gradient(90deg, #4e54c8, #8f94fb);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 26px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.slot-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.slot-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.slot-card h3 {
+    margin-top: 0;
+    font-size: 20px;
+    color: #4e54c8;
+}
+
+.slot-card p {
+    margin: 5px 0;
+}
+
+.slot-card button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: #28a745;
+    color: white;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    transition: background 0.2s ease;
+}
+
+.slot-card button:hover {
+    background: #218838;
+}
+
+.slot-card.booked {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.slot-card.booked button {
+    background: gray;
+    cursor: not-allowed;
+}
+
+form input {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+/* Fade-in Animation for slot cards */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.slot-card {
+    animation: fadeIn 0.5s ease-in-out;
+}
+button {
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr; /* Single column layout */
+        padding: 10px;
+    }
+
+    .slot-card {
+        padding: 15px;
+    }
+
+    header h1 {
+        font-size: 22px;
+    }
+
+    form input, form button {
+        font-size: 16px;
+    }
+
+    header div button {
+        padding: 6px 10px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 18px;
+    }
+
+    header div button {
+        padding: 5px 8px;
+        font-size: 13px;
+    }
+
+    .slot-card h3 {
+        font-size: 18px;
+    }
+
+    form input, form button {
+        font-size: 14px;
+    }
+}

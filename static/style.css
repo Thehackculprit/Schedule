@@ -1,0 +1,280 @@
+/* ===== General Styles ===== */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f8f9fa;
+  color: #333;
+}
+
+header {
+  background: #222;
+  color: #fff;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 20px;
+}
+
+header a {
+  color: #fff;
+  text-decoration: none;
+  background: #007bff;
+  padding: 8px 12px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+header a:hover {
+  background: #0056b3;
+}
+
+/* ===== Main Content ===== */
+main {
+  padding: 20px;
+}
+
+h2 {
+  margin-top: 20px;
+  color: #444;
+}
+
+/* ===== Tables ===== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+table th, table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+table th {
+  background: #007bff;
+  color: #fff;
+}
+
+table tr:nth-child(even) {
+  background: #f2f2f2;
+}
+
+/* ===== Forms ===== */
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+form input, form button {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form button {
+  background: #28a745;
+  color: white;
+  cursor: pointer;
+  border: none;
+}
+
+form button:hover {
+  background: #218838;
+}
+
+/* ===== Buttons ===== */
+.admin-btn, .logout-btn {
+  font-size: 14px;
+}
+
+/* ===== Mobile ===== */
+@media(max-width: 768px) {
+  table, form {
+    font-size: 14px;
+  }
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+/* ===== Reset ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f0f2f5;
+  color: #333;
+}
+
+/* ===== Header ===== */
+header {
+  background: linear-gradient(90deg, #4e54c8, #8f94fb);
+  color: white;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+header h1 {
+  font-size: 22px;
+}
+
+header a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 15px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+header a:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+/* ===== Main ===== */
+main {
+  padding: 20px 40px;
+}
+
+/* ===== Headings ===== */
+h2 {
+  margin: 20px 0;
+  color: #4e54c8;
+}
+
+/* ===== Table Styling ===== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+  background: white;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+table th {
+  background: #4e54c8;
+  color: white;
+  padding: 10px;
+  font-weight: bold;
+}
+
+table td {
+  padding: 10px;
+  text-align: center;
+}
+
+table tr:nth-child(even) {
+  background: #f9f9f9;
+}
+
+/* ===== Forms ===== */
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+form input, form button {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form button {
+  background: #4e54c8;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+form button:hover {
+  background: #3b40a4;
+}
+
+/* ===== Buttons ===== */
+.admin-btn, .logout-btn {
+  font-size: 14px;
+}
+
+/* ===== Responsive ===== */
+@media(max-width: 768px) {
+  table, form {
+    font-size: 14px;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+form button {
+  background: #ff4d4d;
+}
+
+form button:hover {
+  background: #e60000;
+}
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr; /* Single column layout */
+        padding: 10px;
+    }
+
+    .slot-card {
+        padding: 15px;
+    }
+
+    header h1 {
+        font-size: 22px;
+    }
+
+    form input, form button {
+        font-size: 16px;
+    }
+
+    header div button {
+        padding: 6px 10px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 18px;
+    }
+
+    header div button {
+        padding: 5px 8px;
+        font-size: 13px;
+    }
+
+    .slot-card h3 {
+        font-size: 18px;
+    }
+
+    form input, form button {
+        font-size: 14px;
+    }
+}

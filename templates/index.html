@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hack Culprit Interview Slots</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='candidate.css') }}">
+</head>
+<body>
+
+<header>
+    <h1>Hack Culprit Interview Slots</h1>
+    <div style="margin-top: 10px;">
+        <a href="{{ url_for('admin_login') }}">
+            <button style="padding:8px 12px; background:#4e54c8; color:white; border:none; border-radius:5px; cursor:pointer;">
+                Admin Login
+            </button>
+        </a>
+    </div>
+</header>
+
+<div class="container">
+    {% for slot in slots %}
+    <div class="slot-card {% if slot[3] == 1 %}booked{% endif %}">
+        <h3>{{ slot[1] }} | {{ slot[2] }}</h3>
+        <p><strong>Status:</strong> {{ "Booked" if slot[3] == 1 else "Available" }}</p>
+
+        {% if slot[3] == 0 %}
+        <form method="POST" action="{{ url_for('book_slot', slot_id=slot[0]) }}">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <input type="tel" name="phone" placeholder="Your Phone" required>
+            <button type="submit">Book Slot</button>
+        </form>
+        {% else %}
+        <p><strong>Slot Booked</strong></p>
+        {% endif %}
+    </div>
+    {% endfor %}
+</div>
+
+</body>
+</html>
